@@ -5,7 +5,10 @@ const carritoVacio = document.querySelector('#carrito-vacio');
 const contenedorCarrito = document.querySelector('#carrito-productos');
 const carritoAcciones = document.querySelector('#carrito-acciones');
 const carritoComprado  = document.querySelector('#carrito-comprado');
-let botonesEliminar = document.querySelectorAll('.carrito-producto-eliminar')
+let botonesEliminar = document.querySelectorAll('.carrito-producto-eliminar');
+const botonVaciar = document.querySelector('#botonVaciarCarrito');
+const botonComprarAhora = document.querySelector('#botonComprarAhora');
+const totalCompra = document.querySelector('#total');
 
 
 //funcion cargar productos del array carrito
@@ -59,6 +62,7 @@ function cargarProductos(){
     }
 
     ActualizarBotonesEliminar()
+    calcularTotal()
 }
 
 cargarProductos()
@@ -89,5 +93,51 @@ function eliminarDelCarrito(e) {
     cargarProductos();
 
     localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
+};
+
+// Evento boton vaciar carrito 
+botonVaciar.addEventListener('click', vaciarCarrito)
+function vaciarCarrito(){
+
+    productosEnCarrito.length = 0;
+    localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
+    cargarProductos(); 
+};
+
+
+function calcularTotal() {
+    const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.cantidad * producto.precio), 0);
+    totalCompra.innerText = `${totalCalculado} €`
+
+};
+
+
+botonComprarAhora.addEventListener('click', comprarCarrito)
+function comprarCarrito(){
+
+    productosEnCarrito.length = 0;
+    localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
+
+    carritoVacio.classList.add('disabled');
+    carritoComprado.classList.remove('disabled');
+    carritoAcciones.classList.add('disabled');
+    contenedorCarrito.classList.add('disabled');
+
+    Swal.fire({
+        title: "Gracias por tu compra ",
+        text: "Esperamos verte pronto! 🎉",
+        color: "#4f2d8c",
+        position: "center",
+        backdrop: "linear-gradient(#e72362, #4f2d8c)",
+        background: "white",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: false,
+        showCancelButton: false,
+        timer: 2500
+    });
+    
+    
 };
 

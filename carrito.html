@@ -60,14 +60,14 @@
 
                 <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
-                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                        <button class="carrito-acciones-vaciar" id="botonVaciarCarrito">Vaciar carrito</button>
                     </div>
                     <div class="carrito-acciones-derecha">
                         <div class="carrito-acciones-total">
                             <p>Total: </p>
                             <p id="total">600€</p>
                         </div>
-                        <button class="carrito-acciones-comprar">Comprar ahora</button>
+                        <button class="carrito-acciones-comprar" id="botonComprarAhora">Comprar ahora</button>
                     </div>
 
                 </div>
@@ -77,6 +77,8 @@
         </main>
     </div>
 
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript -->
     <script src="./assets/js/products.js"></script>
     <script src="./assets/js/carrito.js"></script>
