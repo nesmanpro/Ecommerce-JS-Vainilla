@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="wrapper">
+
+        <!--   -->
+        <aside>
+            <header>
+                <div class="wrap-logo">
+                    <img class="logo" src="./assets/img/logo.svg" alt="logo">
+                </div>
+            </header>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a class="boton-menu boton-volver" href="./index.html"><i class="bi bi-arrow-return-left"></i>
+                            Seguir comprando </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="./carrito.html"><i
+                                class="bi bi-cart-fill "></i> Carrito </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer>
+                <p class="texto-footer">©2023 By nesmanpro</p>
+            </footer>
+        </aside>
+
+        <!-- Main content -->
+        <main>
+            <h2 class="titulo-principal">Productos del carrito</h2>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito esta vacío.
+                    <i class="bi bi-emoji-frown"></i></p>
+
+                <div id="carrito-productos" class="carrito-productos disabled">
+
+                    <!-- Productos -->
+                    
+
+                </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total: </p>
+                            <p id="total">600€</p>
+                        </div>
+                        <button class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+
+                </div>
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra! <i class="bi bi-emoji-laughing"></i></p>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/carrito.js"></script>
+</body>
+
+</html>
