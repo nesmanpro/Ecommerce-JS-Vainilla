@@ -128,7 +128,7 @@ function comprarCarrito(){
         text: "Esperamos verte pronto! 🎉",
         color: "#4f2d8c",
         position: "center",
-        backdrop: "linear-gradient(#e72362, #4f2d8c)",
+        backdrop: "linear-gradient(-90deg, #e72362, #4f2d8c)",
         background: "white",
         allowOutsideClick: false,
         allowEscapeKey: false,
