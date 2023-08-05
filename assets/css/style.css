@@ -295,6 +295,126 @@ main {
     color: var(--clr-white);
 }
 
+.header-mobile {
+    display: none;
+}
+
 .disabled {
     display: none;
 }
+
+.close-menu {
+    display: none;
+}
+
+
+/* **** Media Querys  **** */
+
+
+@media screen and (max-width: 1300px) {
+    .wrapper {
+        grid-template-columns: 26% 1fr;
+
+    }
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        grid-template-columns: 30% 1fr;
+    }
+}
+
+@media screen and (max-width: 870px) {
+
+    .info {
+        min-width: 95vw;
+        min-height: 4rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .header-mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo {
+        height: 6rem;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        margin: 1rem;
+        padding: 2rem;
+        margin-top: 0;
+    }
+
+    aside{
+        position: fixed;
+        z-index: 9;
+        background-color: var(--clr-main);
+        left: 0;
+        box-shadow:  0 0 0 100vmax rgba(0, 0, 0, .75);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s;
+    }
+
+    .aside-visible {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .boton-menu.active::before,
+    .boton-menu.active::after {
+        display: none;
+    }
+
+
+    .open-menu,
+    .close-menu {
+        background-color: transparent;
+        border: none;
+        color: var(--clr-white);
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .carrito-acciones {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+}
+

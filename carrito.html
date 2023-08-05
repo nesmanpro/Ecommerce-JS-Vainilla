@@ -11,16 +11,26 @@
     <!-- Meta tags & Title -->
     <meta name="description" content="Our Online store provides high-quality products. We are dedicated to creating unique and effective equipment for your ridings.">
     <meta name="keywords" content="Cycling Class Heroes">
-    <meta property="og:image" content="../assets/img/complementos/05">
+    <meta property="og:image" content="../assets/img/complementos/05.webp">
     <title>Carrito</title>
 </head>
 
 <body>
     <!-- main container -->
     <div class="wrapper">
+        <!-- Para mobile version -->
+        <header class="header-mobile">
+            <img class="logo" src="./assets/img/logo.svg" alt="logo">
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
 
-        <!--   -->
+        <!-- Menu Aside Desktop -->
         <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
             <header>
                 <div class="wrap-logo">
                     <img class="logo" src="./assets/img/logo.svg" alt="logo">
@@ -82,6 +92,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/products.js"></script>
     <script src="./assets/js/carrito.js"></script>
+    <script src="./assets/js/menu.js"></script>
 </body>
 
 </html>
