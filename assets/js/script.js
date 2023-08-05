@@ -104,13 +104,12 @@ function agregarAlCarrito(e) {
     // toastify con el nombre del producto
     Toastify({
         text: `Se ha agregado "${productAdded.titulo}" al carrito`,
-        duration: 3000,
+        duration: 1500,
         className: "info",
         style: {
             background: "linear-gradient(to right, #4f2d8c, #e72362)",
         },
         offset: {
-            x: 5,
             y: 15,
         },
     }).showToast();
