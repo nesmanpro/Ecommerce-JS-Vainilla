@@ -121,7 +121,7 @@ function agregarAlCarrito(e) {
         duration: 1500,
         className: "info",
         style: {
-            background: "linear-gradient(to right, #4f2d8c, #e72362)",
+            background: "linear-gradient(to right, #E94057, #8A2387)",
         },
         offset: {
             y: 15,

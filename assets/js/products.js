@@ -30,16 +30,6 @@ const productos = [
         },
         precio: 80
     },
-    // {
-    //     id: 'ropa-04',
-    //     titulo: "Tshirt DSNV",
-    //     foto: "./assets/img/ropa/04.webp",
-    //     categoria:{
-    //         nombre:'Ropa',
-    //         id:'ropa',
-    //     },
-    //     precio: 60
-    // },
     {
         id: 'ropa-05',
         titulo: "Tshirt WHT 02 Courage",

@@ -3,10 +3,11 @@
 
 :root {
     --clr-main: #e72362;
+    --clr-main-dark: #582456;
     --clr-main-light: #ff8cb0;
     --clr-white: #fffffe;
     --clr-light: #ffd6e3;
-    --clr-violet: #e3336b;
+    --clr-violet: #8A2387;
     --clr-violet-light: #fff1f6;
 }
 
@@ -20,19 +21,19 @@
 
 .nav-login {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3rem 0 4rem 0;
-    margin-right: 2rem;
+    grid-template-columns:1fr 1fr;
+    /* margin: 3rem 0 4rem 0; */
+
 }
 
 .contenedor-formulario {
 margin-right: 1rem;
-padding: 3rem;
+padding: 3rem 0;
 }
 
 .imagen-login {
     max-width: 100%;
-    border-radius: 1rem;
+
 }
 
 .button-form {
@@ -398,6 +399,10 @@ main {
 @media screen and (max-width: 1000px) {
     .wrapper {
         grid-template-columns: 30% 1fr;
+    }
+    .nav-login {
+        display: flex;
+        flex-direction: column;
     }
 }
 
