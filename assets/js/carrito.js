@@ -34,13 +34,13 @@ function cargarProductos(){
                 <img class="carrito-producto-imagen" src="${producto.foto}" alt="${producto.titulo}">
                 <div class="carrito-producto-titulo">
                     <small>Titulo</small>
-                    <h3>${producto.titulo}</h3>
+                    <h3 class="tituloh3">${producto.titulo}</h3>
                 </div>
                 <div class="carrito-producto-cantidad">
                     <small>cantidad</small>
                     <p>${producto.cantidad}</p>
                 </div>
-                <div class="carrito-producto-precio">
+                <div class="carrito-producto-precio precio-mobile">
                     <small>precio</small>
                     <p>${producto.precio} €</p>
                 </div>

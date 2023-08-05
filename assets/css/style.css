@@ -411,10 +411,46 @@ main {
 
 @media screen and (max-width: 600px) {
 
+    .carrito-producto {
+        grid-template-columns: 1fr 3fr repeat(2, 1fr) 1fr;
+    }
     
     .contenedor-productos {
         grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
     }
+
+    .precio-mobile {
+        display: none;
+    }
+
+    .tituloh3 {
+        font-size: 1rem;
+    }
+
+
+.carrito-acciones-vaciar {
+    border: 0;
+    background-color: var(--clr-violet-light);
+    color: var(--clr-violet);
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carrito-acciones-comprar {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+.carrito-acciones-total {
+    padding: 1rem;
+    font-size: 1rem;
+}
 
 }
 
