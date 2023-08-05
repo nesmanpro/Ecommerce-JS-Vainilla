@@ -43,11 +43,11 @@
                             Seguir comprando </a>
                     </li>
                     <li>
-                        <a class="boton-menu boton-carrito active" href="./carrito.html"><i
-                                class="bi bi-cart-fill "></i> Carrito </a>
+                        <a class="boton-menu boton-carrito" href="./carrito.html"><i
+                                class="bi bi-cart-fill "></i> Carrito<span class="numero" id="numero">0</span></a>
                     </li>
                     <li>
-                        <a href="./login.html" id="login" class="boton-menu boton-login"><i class="bi bi-person-fill"></i>Login</a>
+                        <button id="login" class="boton-menu boton-login active"><i class="bi bi-person-fill"></i>Login</button>
                     </li>
                 </ul>
             </nav>
@@ -59,17 +59,31 @@
 
         <!-- Main content -->
         <main>
-            <h2 class="titulo-principal">Productos del carrito</h2>
+            <h2 class="titulo-principal">Accede con tu nombre de usuario para continuar con la compra.</h2>
             <div class="contenedor-carrito">
-                <p id="carrito-vacio" class="carrito-vacio">Tu carrito esta vacío.
-                    <i class="bi bi-emoji-frown"></i></p>
 
-                <div id="carrito-productos" class="carrito-productos disabled">
+                    <!-- login -->
 
-                    <!-- Productos -->
-                    
+                    <nav id="nav-login" class="nav-login">
+                        <div class="contenedor-formulario">
+                            <small id="input-mensaje"></small>
+                            <form id="form" class="form-login">
+                                <div class="container-label" id="container-label">
+                                    <label for="fname">Login & Password</label>
+                                </div>
+                                <div class="container-inputs">
+                                    <input class="input-nombre" id="input-login" type="email" value="Login"><br>
+                                    <input class="input-password" id="input-password" type="password" value="password">
+                                </div>
+                                <button class="button-form" id="button-form">Aceptar</button>
+                            </form>
+                        </div>
+                        <div class="contenedor-imagen">
+                            <img class="imagen-login" src="./assets/img/ideas2.svg" alt="cycling class hero">
+                        </div>
+                    </nav>
 
-                </div>
+
 
                 <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
@@ -95,7 +109,7 @@
     <!-- JavaScript -->
     <script src="./assets/js/menu.js"></script>
     <script src="./assets/js/products.js"></script>
-    <script src="./assets/js/carrito.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>

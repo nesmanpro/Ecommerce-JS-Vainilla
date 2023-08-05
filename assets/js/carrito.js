@@ -9,7 +9,7 @@ let botonesEliminar = document.querySelectorAll('.carrito-producto-eliminar');
 const botonVaciar = document.querySelector('#botonVaciarCarrito');
 const botonComprarAhora = document.querySelector('#botonComprarAhora');
 const totalCompra = document.querySelector('#total');
-
+const botonLogin = document.querySelector('#boton-login')
 
 //funcion cargar productos del array carrito
 function cargarProductos(){
@@ -140,4 +140,3 @@ function comprarCarrito(){
     
     
 };
-

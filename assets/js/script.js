@@ -9,6 +9,7 @@ let prodCarrito = JSON.parse(localStorage.getItem('productos-en-carrito')) || []
 
 
 
+
 //funcion crea producto por cada objeto de objetos.js
 function cargarProductos(productosElegidos) {
     //vaciar div Productos para que reinicie cada vez que se llama a la funcion
@@ -28,18 +29,17 @@ function cargarProductos(productosElegidos) {
             </div>
         `;
 
-
         contenedorProducts.append(prod);
     })
-    // llama a funcion con un AddEventListener de cada boton "Agregar" nuevo
+
+    // llama a funcion con AddEventListener de cada boton "Agregar" nuevo
     ActualizarBotonesAgregar()
     actualizarNumerito()
 }
 
 
-// llama a funcion anterior
+// llama a funcion anterior para cargar todos los productos por default
 cargarProductos(productos);
-
 
 
 
@@ -47,21 +47,29 @@ cargarProductos(productos);
 botonesCategoria.forEach(boton => {
     boton.addEventListener('click', (e) => {
 
-        // desactiva .active el resto de botones
+        // desactiva .active en el resto de botones
         botonesCategoria.forEach(boton => boton.classList.remove('active'));
         
         // activa .active el boton seleccionado
         e.currentTarget.classList.add('active');
 
-        // condicional si id boton != "todos", filtra productos con id === id boton, y cambia titulo correspondiente
+        // condicional si id boton != "todos", filtra productos con id === id boton, y cambia titulo correspondiente.
         if (e.currentTarget.id != 'todos') {
             
+            // constante busca exista categoria con mismo id del boton
             const prodsTitle = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+
+            // cambia titulo al nombre categoria
             tituloPrincipal.innerText = prodsTitle.categoria.nombre
+
+            // constante busca y muestra productos con mimsma categoria que id del boton
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+
             cargarProductos(productosBoton);
 
         } else {
+
+            // muestra todos productos
             tituloPrincipal.innerText = 'Todos los productos'
             cargarProductos(productos);
         }
@@ -70,9 +78,11 @@ botonesCategoria.forEach(boton => {
 
 
 
-//funcion cargar eventListener en botones cada vez q se generen 
+//funcion para cargar botones generados de productos con eventListener
 function ActualizarBotonesAgregar(){
+
     botonesAgregar = document.querySelectorAll('.producto-agregar');
+
     botonesAgregar.forEach(btn => {
         btn.addEventListener('click', agregarAlCarrito);
         
@@ -84,24 +94,28 @@ function ActualizarBotonesAgregar(){
 //funcion agregar productos al carrito y aumentar cantidad si ya existe en carrito (evitando duplicidad)
 function agregarAlCarrito(e) {
 
-    //constante del id producto actual del boton que se selecciona
+    //Guarda id del boton del producto a agregar
     const idBoton = e.currentTarget.id;
-    // constante producto encontrado con coincidencia de 
-    const productAdded = productos.find(producto => producto.id === idBoton);
 
+    // Guarda objetos con mismo id que boton
+    const productAdded = productos.find(producto => producto.id === idBoton);
+    
+    // Guarga posicion del producto con mismo id
     const index = prodCarrito.findIndex(producto => producto.id === idBoton);
 
+    // sabiendo la posicion, podemos aumentar su cantidad en caso de que ya este agregado
     if(prodCarrito.some(producto => producto.id === idBoton)){
         prodCarrito[index].cantidad++;
         
     } else {
 
+        // o agregarlo en caso de que no esté.
         productAdded.cantidad = 1;
         prodCarrito.push(productAdded);  
         
     }
 
-    // toastify con el nombre del producto
+    // toastify con el nombre del producto agregado
     Toastify({
         text: `Se ha agregado "${productAdded.titulo}" al carrito`,
         duration: 1500,
@@ -114,15 +128,19 @@ function agregarAlCarrito(e) {
         },
     }).showToast();
 
-
+    // llamamos a la funcion actualizar cantidad (declarada más abajo)
     actualizarNumerito();
     localStorage.setItem('productos-en-carrito', JSON.stringify(prodCarrito));
 };
 
 
 
-// Function sumar numero de productos y mostrarlo en aside
+// Function actualizar cantidad de productos teniendo en cuenta producto.cantidad 
 function actualizarNumerito() {
     const lastNumerito = prodCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerHTML = lastNumerito;
 }
+
+
+
+

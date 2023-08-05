@@ -3,10 +3,11 @@
 
 :root {
     --clr-main: #e72362;
+    --clr-mainBG: #e72362;
     --clr-main-light: #ff8cb0;
     --clr-white: #fffffe;
     --clr-light: #ffd6e3;
-    --clr-violet: #4f2d8c;
+    --clr-violet: #8A2387;
     --clr-violet-light: #f4eeff;
 }
 
@@ -17,6 +18,74 @@
     font-family: 'rubik', sans-serif;
     font-family: 'Poppins', sans-serif;
 }
+
+.nav-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3rem 0 4rem 0;
+    margin-right: 2rem;
+}
+
+.contenedor-formulario {
+margin-right: 1rem;
+padding: 3rem;
+}
+
+.imagen-login {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.button-form {
+    border: 2px solid var(--clr-violet);
+    background-color: var(--clr-violet);
+    color: var(--clr-white);
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding: .2rem 1rem;
+    cursor: pointer;   
+}
+
+.button-form:hover {
+    background-color: transparent;
+    color: var(--clr-main);
+}
+
+.container-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.input-nombre,
+.input-password {
+    border: none;
+    padding: .2rem .5rem;
+    border-radius: 1rem;
+    border: 2px solid var(--clr-violet);
+}
+
+.swal2-popup  {
+    border-radius: 2rem !important;
+}
+
+.swal2-confirm,
+.swal2-cancel{
+    border-radius: 3rem !important; 
+    padding: .5rem 2rem;
+}
+
+.swal2-confirm {
+    background-color: var(--clr-main)  !important;
+    border: 3px solid var(--clr-main) !important;
+}
+
+.swal2-cancel {
+    background-color: var(--clr-violet)  !important;
+    border: 3px solid var(--clr-violet) !important;
+}
+
+
 
 .info {
     border-radius: 3rem;
@@ -39,7 +108,10 @@ a {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: var(--clr-main);
+    background: #8A2387;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 aside {
@@ -61,8 +133,6 @@ aside {
 .logo {
     margin-left: 1rem;
     height: 7rem;
-
-
 }
 
 .menu {
@@ -189,7 +259,13 @@ main {
 }
 
 
+
+
 /* **** Carrito **** */
+
+.bi-arrow-return-left {
+    font-size: 20px;
+}
 
 .contenedor-carrito {
     display: flex;
