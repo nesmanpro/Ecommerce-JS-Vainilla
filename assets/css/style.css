@@ -335,6 +335,7 @@ main {
         font-size: 1.5rem;
         text-align: center;
         transition-duration: .5s;
+
     }
 
     .header-mobile{
@@ -412,13 +413,17 @@ main {
 
 @media screen and (max-width: 600px) {
 
+    main{
+        padding:  3rem .7rem;
+    }
+
     .carrito-producto {
-        grid-template-columns: 1fr 3fr repeat(2, 1fr) 1fr;
+        grid-template-columns: 1fr 3fr repeat(2, 1fr) .2fr;
+        padding-right: .5rem;
     }
     
     .contenedor-productos {
         grid-template-columns: 1fr;
-        margin: 0;
         padding: 0;
     }
 
@@ -427,7 +432,7 @@ main {
     }
 
     .tituloh3 {
-        font-size: 1rem;
+        font-size: .85rem;
     }
 
 
@@ -443,13 +448,18 @@ main {
 }
 
 .carrito-acciones-comprar {
-    padding: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.carrito-acciones-vaciar {
+    padding: .5rem;
     font-size: 1rem;
 }
 
 
 .carrito-acciones-total {
-    padding: 1rem;
+    padding: .5rem;
     font-size: 1rem;
 }
 
