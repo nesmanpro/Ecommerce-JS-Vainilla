@@ -3,12 +3,11 @@
 
 :root {
     --clr-main: #e72362;
-    --clr-mainBG: #e72362;
     --clr-main-light: #ff8cb0;
     --clr-white: #fffffe;
     --clr-light: #ffd6e3;
-    --clr-violet: #8A2387;
-    --clr-violet-light: #f4eeff;
+    --clr-violet: #e3336b;
+    --clr-violet-light: #fff1f6;
 }
 
 * {
@@ -111,7 +110,6 @@ a {
     background: #8A2387;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 aside {
@@ -444,7 +442,9 @@ main {
     aside{
         position: fixed;
         z-index: 9;
-        background-color: var(--clr-main);
+        background: #8A2387;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #E94057, #782775);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #E94057, #782775); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         left: 0;
         box-shadow:  0 0 0 100vmax rgba(0, 0, 0, .75);
         transform: translateX(-100%);
