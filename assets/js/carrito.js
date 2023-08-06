@@ -1,6 +1,7 @@
 
 // DOM carrito.html
 let productosEnCarrito = JSON.parse(localStorage.getItem('productos-en-carrito')) || [];
+let datosFormulario = JSON.parse(localStorage.getItem('valores_de_input')) || [];
 const carritoVacio = document.querySelector('#carrito-vacio');
 const contenedorCarrito = document.querySelector('#carrito-productos');
 const carritoAcciones = document.querySelector('#carrito-acciones');
@@ -11,7 +12,10 @@ const botonComprarAhora = document.querySelector('#botonComprarAhora');
 const totalCompra = document.querySelector('#total');
 const botonLogin = document.querySelector('#boton-login')
 
-//funcion cargar productos del array carrito
+
+
+
+//funcion precargar productos del array carrito
 function cargarProductos(){
     
     // condicional para ocultar o mostrar elementos ocultos mediante classes
@@ -104,39 +108,60 @@ function vaciarCarrito(){
     cargarProductos(); 
 };
 
-
+// Funcion calcular precio total
 function calcularTotal() {
     const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc + (producto.cantidad * producto.precio), 0);
     totalCompra.innerText = `${totalCalculado} €`
 
 };
 
-
+// Funcion evento boton comprar
 botonComprarAhora.addEventListener('click', comprarCarrito)
 function comprarCarrito(){
 
-    productosEnCarrito.length = 0;
-    localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
+    if(datosFormulario.length === 0){
 
-    carritoVacio.classList.add('disabled');
-    carritoComprado.classList.remove('disabled');
-    carritoAcciones.classList.add('disabled');
-    contenedorCarrito.classList.add('disabled');
+        Swal.fire({
+            title: `Parece que no estas registrado` ,
+            text: "Primero debes suscribirte para realizar el pedido 🎉",
+            icon: 'warning',
+            color: "#4f2d8c",
+            position: "center",
+            backdrop: "linear-gradient(to right, #E94057, #8A2387)",
+            background: "white",
+            allowOutsideClick: true,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            showConfirmButton: false,
+            showCancelButton: false,
+            timer: 3000
+        });
 
-    Swal.fire({
-        title: "Gracias por tu compra ",
-        text: "Esperamos verte pronto! 🎉",
-        color: "#4f2d8c",
-        position: "center",
-        backdrop: "linear-gradient(to right, #E94057, #8A2387)",
-        background: "white",
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        allowEnterKey: false,
-        showConfirmButton: false,
-        showCancelButton: false,
-        timer: 2500
-    });
+    } else {
+        productosEnCarrito.length = 0;
+        localStorage.setItem('productos-en-carrito', JSON.stringify(productosEnCarrito));
+    
+        carritoVacio.classList.add('disabled');
+        carritoComprado.classList.remove('disabled');
+        carritoAcciones.classList.add('disabled');
+        contenedorCarrito.classList.add('disabled');
+    
+        Swal.fire({
+            title: `Gracias por tu compra ${datosFormulario[0].nombre}` ,
+            text: "Esperamos verte pronto! 🎉",
+            color: "#4f2d8c",
+            icon: 'success',
+            position: "center",
+            backdrop: "linear-gradient(to right, #E94057, #8A2387)",
+            background: "white",
+            allowOutsideClick: true,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            showConfirmButton: false,
+            showCancelButton: false,
+            timer: 3000
+        });
+    }
     
     
 };
