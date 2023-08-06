@@ -13,7 +13,7 @@
         content="Our Online store provides high-quality products. We are dedicated to creating unique and effective equipment for your ridings.">
     <meta name="keywords" content="Cycling Class Heroes">
     <meta property="og:image" content="./assets/img/np02.jpg">
-    <title>Login</title>
+    <title>Suscripcion</title>
 </head>
 
 <body>
@@ -34,7 +34,9 @@
             </button>
             <header>
                 <div class="wrap-logo">
-                    <img class="logo" src="./assets/img/logo.svg" alt="logo">
+                    <a href="./index.html">
+                        <img class="logo" src="./assets/img/logo.svg" alt="logo">
+                    </a>
                 </div>
             </header>
             <nav>
@@ -49,7 +51,7 @@
                     </li>
                     <li>
                         <button id="login" class="boton-menu boton-login active"><i
-                                class="bi bi-person-fill"></i>Login</button>
+                                class="bi bi-person-fill"></i>Suscríbete</button>
                     </li>
                 </ul>
             </nav>
@@ -61,28 +63,33 @@
 
         <!-- Main content -->
         <main>
-            <h2 class="titulo-principal">Accede con tu nombre de usuario para continuar con la compra.</h2>
-            <div class="contenedor-carrito">
+            <h2 class="titulo-principal-login">Date de alta a nuestro boletin de noticias para estar al tanto de las mejores ofertas.</h2>
+            <div class="contenedor-login">
 
                 <!-- login -->
 
                 <nav id="nav-login" class="nav-login">
                     <div class="contenedor-formulario">
-                        <small id="input-mensaje"></small>
                         <form id="form" class="form-login">
                             <div class="container-label" id="container-label">
-                                <label for="fname">Login & Password</label>
+                                <label for="fname">Datos del suscriptor:</label>
                             </div>
                             <div class="container-inputs">
-                                <input class="input-nombre" id="input-login" type="email" value="Login"><br>
-                                <input class="input-password" id="input-password" type="password" value="password">
+                                <input class="input-nombre" id="input-login" type="text" placeholder="Nombre">
+                                <!-- <small class="small-login" id="login-input-mensaje"></small> -->
+                                <input class="input-password" id="input-password" type="Email" placeholder="Email" required>
+                                <input class="input-password" id="input-direccion" type="text" placeholder="Direccion" required>
                             </div>
-                            <button class="button-form" id="button-form">Aceptar</button>
+                            <small class="small-login" id="pass-input-mensaje"></small>
+                            <button type="submit" class="button-form" id="button-form">Aceptar</button><br>
                         </form>
                     </div>
                     <div class="contenedor-imagen">
                         <img class="imagen-login" src="./assets/img/ideas2.svg" alt="cycling class hero">
                     </div>
+                </nav>
+                <nav class="nav-login">
+                    
                 </nav>
 
             </div>
