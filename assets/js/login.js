@@ -89,13 +89,13 @@ function validarForm(e){
 
     Swal.fire({
         title: `Gracias ${loginInp.value}`,
-        text: "Tus datos se han guardado.🥳 \n Ya puedes realizar tu pedido.🎉",
+        text: `Tus datos se han guardado.🥳 \n Ya puedes realizar tu pedido.🎉`,
         color: "#4f2d8c",
         icon: 'success',
         position: "center",
-        backdrop: "linear-gradient(to right, #E94057, #8A2387)",
+        backdrop: "linear-gradient(to right, #E94057, #8A2387",
         background: "white",
-        allowOutsideClick: false,
+        allowOutsideClick: true,
         allowEscapeKey: false,
         allowEnterKey: false,
         showConfirmButton: false,

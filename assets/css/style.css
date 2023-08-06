@@ -7,7 +7,7 @@
     --clr-main-light: #ff8cb0;
     --clr-white: #fffffe;
     --clr-light: #ffd6e3;
-    --clr-violet: #8A2387;
+    --clr-violet: #63238a;
     --clr-violet-light: #fff1f6;
 }
 
@@ -185,7 +185,8 @@ main {
     background-color: var(--clr-violet);
     color: var(--clr-white);
     padding: 1rem;
-    border-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     margin-top: -2rem;
     position: relative;
     display: flex;

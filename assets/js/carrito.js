@@ -127,7 +127,7 @@ function comprarCarrito(){
             icon: 'warning',
             color: "#4f2d8c",
             position: "center",
-            backdrop: "linear-gradient(to right, #E94057, #8A2387)",
+            backdrop: "0 0 0 100vmax rgba(0, 0, 0, .75)",
             background: "white",
             allowOutsideClick: true,
             allowEscapeKey: false,
