@@ -504,9 +504,11 @@ main {
     aside{
         position: fixed;
         z-index: 9;
-        background: #8A2387;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #E94057, #782775);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #E94057, #782775); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #e73c7e;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #e72362 ,#63238a, #23d5ab);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-45deg, #ee7752, #e73c7e,#e72362, #63238a, #23d5ab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: 400% 400%;
+        animation: gradient 13s ease infinite;
         left: 0;
         box-shadow:  0 0 0 100vmax rgba(0, 0, 0, .75);
         transform: translateX(-100%);
