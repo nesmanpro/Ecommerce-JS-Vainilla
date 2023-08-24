@@ -84,6 +84,7 @@ function ActualizarBotonesEliminar(){
 
 function eliminarDelCarrito(e) {
 
+    
     //constante del id producto actual del boton eliminar
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -93,6 +94,18 @@ function eliminarDelCarrito(e) {
     } else {
         productosEnCarrito.splice(index, 1);
     }
+    // toastify con el nombre del producto agregado
+    Toastify({
+        text: `Eliminado del carrito`,
+        duration: 1500,
+        className: "info",
+        style: {
+            background: "linear-gradient(to right, #E94057, #8A2387)",
+        },
+        offset: {
+            y: 15,
+        },
+    }).showToast();
 
     cargarProductos();
 

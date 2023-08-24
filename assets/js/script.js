@@ -1,4 +1,15 @@
+//declarar el array vacio que contendrá los productos
+let productos = [];
 
+// fetch de los productos del Json
+fetch("./assets/js/products.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
+
+    
 // DOM
 const contenedorProducts = document.querySelector('#contenedor-productos');
 const botonesCategoria = document.querySelectorAll('.boton-categoria');
@@ -6,8 +17,6 @@ const tituloPrincipal = document.querySelector('#titulo-principal');
 let botonesAgregar = document.querySelectorAll('.producto-agregar');
 const numerito = document.querySelector('#numero');
 let prodCarrito = JSON.parse(localStorage.getItem('productos-en-carrito')) || []; 
-
-
 
 
 //funcion crea producto por cada objeto de objetos.js
@@ -36,11 +45,6 @@ function cargarProductos(productosElegidos) {
     ActualizarBotonesAgregar()
     actualizarNumerito()
 }
-
-
-// llama a funcion anterior para cargar todos los productos por default
-cargarProductos(productos);
-
 
 
 // evento botones y filtrado productos por ID (currentTarget para que sea todo el boton y no solo un elemento suelto)
@@ -139,6 +143,8 @@ function agregarAlCarrito(e) {
 function actualizarNumerito() {
     const lastNumerito = prodCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerHTML = lastNumerito;
+
+
 }
 
 
