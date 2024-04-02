@@ -1,31 +1,29 @@
 # Online Store Project
 
-Este proyecto es una tienda en línea completamente desarrollada utilizando tecnologías web fundamentales como JavaScript vanilla, HTML y CSS. Se enfoca en ofrecer una experiencia de compra fluida y atractiva para los usuarios interesados en productos relacionados con el ciclismo. Desde accesorios hasta prendas de vestir, la tienda proporciona una amplia variedad de productos para satisfacer las necesidades de los clientes.
+This project is a fully developed online store using fundamental web technologies like Vanilla JavaScript, HTML, and CSS. It focuses on providing a seamless and engaging shopping experience for users interested in cycling-related products. From accessories to clothing, the store offers a wide variety of products to meet customers' needs.
 
-![](assets/img/uiux.webp)
+![UI/UX Design](assets/img/uiux.webp)
 
-## Características Principales
+## Key Features
 
-- **Interfaz Responsiva**: La tienda en línea está diseñada para ser compatible con dispositivos de diferentes tamaños, lo que permite a los usuarios navegar y realizar compras desde sus dispositivos móviles, tablets o computadoras de escritorio.
+- **Responsive Interface**: The online store is designed to be compatible with devices of different sizes, allowing users to browse and make purchases from their mobile devices, tablets, or desktop computers.
 
-- **Gestión de Carrito de Compras**: Con una implementación de JavaScript puro, los usuarios pueden agregar productos a su carrito de compras, ver el resumen de la compra y realizar compras con facilidad.
+- **Shopping Cart Management**: With a pure JavaScript implementation, users can add products to their shopping cart, view the purchase summary, and easily make purchases.
 
-- **Autenticación de Usuarios**: El proyecto incluye un sistema de registro e inicio de sesión para que los usuarios puedan crear una cuenta, iniciar sesión y acceder a sus detalles de perfil para una experiencia de compra más personalizada.
+- **User Authentication**: The project includes a registration and login system so that users can create an account, log in, and access their profile details for a more personalized shopping experience.
 
-- **Validación de Formularios**: Se aplican validaciones de formularios tanto en el proceso de registro como en otros formularios relacionados con la compra, asegurando que los datos proporcionados por los usuarios sean correctos y válidos.
+- **Form Validation**: Form validations are applied both in the registration process and other forms related to the purchase, ensuring that user-provided data is correct and valid.
 
-- **Persistencia de Datos en el Navegador**: Los datos del carrito de compras y otros detalles del usuario se almacenan localmente en el navegador del cliente, lo que permite una experiencia de compra sin problemas incluso al actualizar o cerrar el navegador.
+- **Browser Data Persistence**: Shopping cart data and other user details are stored locally in the client's browser, allowing for a seamless shopping experience even when refreshing or closing the browser.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **HTML/CSS**: Para la estructura y el diseño del sitio web.
-- **JavaScript**: Para la lógica de interacción del cliente, como la gestión del carrito de compras y la validación del formulario.
-- **Bootstrap Icons**: Para la inclusión de iconos en el diseño del sitio web.
-- **SweetAlert2 y Toastify**: Para mostrar mensajes emergentes y notificaciones al usuario de forma atractiva.
+- **HTML/CSS**: For the website's structure and design.
+- **JavaScript**: For client-side interaction logic, such as shopping cart management and form validation.
+- **Bootstrap Icons**: For including icons in the website design.
+- **SweetAlert2 and Toastify**: For displaying attractive pop-up messages and notifications to the user.
 
-## Instalación y Uso
+## Installation and Usage
 
-1. Clona este repositorio en tu máquina local.
-2. Abre el archivo `index.html` en tu navegador web para comenzar a explorar la tienda en línea.
-
-¡Disfruta de tu experiencia de compra en nuestra tienda en línea!
+1. Clone this repository to your local machine.
+2. Open the `index.html` file in your web browser to start exploring the online store.
